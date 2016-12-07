@@ -1,0 +1,12 @@
+package test02_transaction;
+
+public class ProductService {
+	private int saleQuantity = 1;
+	private 
+	
+	private ProductDao dao = new ProductDao();
+	
+	public saleProduct() {
+		
+	}
+}

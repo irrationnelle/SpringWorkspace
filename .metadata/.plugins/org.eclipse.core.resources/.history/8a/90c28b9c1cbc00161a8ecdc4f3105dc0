@@ -1,0 +1,12 @@
+package test02;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Sample implements InitializingBean, DisposableBean{
+	public Sample() {
+		System.out.println("Sample »ý¼ºÀÚ");
+	}
+	
+	
+}

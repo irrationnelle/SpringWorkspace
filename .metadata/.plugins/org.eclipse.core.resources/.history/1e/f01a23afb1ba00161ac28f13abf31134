@@ -1,0 +1,9 @@
+package ver2_1;
+
+public class Driver {
+	public static void main(String[] args) {
+		// Car 객체가 의존하는 타이어 객체를 외부에서 주입함.
+		KoreaTire t = new KoreaTire();
+		Car myCar = new Car(t);
+	}
+}

@@ -1,0 +1,9 @@
+package test02_transaction;
+
+public class ProductService {
+	private ProductDao dao = new ProductDao();
+	
+	public saleProduct() {
+		
+	}
+}

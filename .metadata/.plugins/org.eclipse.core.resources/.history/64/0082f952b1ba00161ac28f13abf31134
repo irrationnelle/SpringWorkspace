@@ -1,0 +1,11 @@
+package ver2_1;
+
+public class Car {
+	private Tire tire;
+	
+	public Car(tire tire) {
+		this.tire = tire;
+	}
+	
+	
+}

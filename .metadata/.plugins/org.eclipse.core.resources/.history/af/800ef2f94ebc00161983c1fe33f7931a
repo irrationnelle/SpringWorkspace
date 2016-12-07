@@ -1,0 +1,30 @@
+package test02_transaction;
+
+import java.util.Date;
+import java.util.Random;
+
+public class ProductService {
+	private int saleQuantity = 1;
+	private String buyer = "rase";
+	private Date saleDate = new Date();
+	private int productNum = 2;
+	
+	private ProductDao dao = ProductDao.getInstance();
+	
+	public void saleProduct() {
+		dao.startTransaction();	// transaction start
+		
+		// 이 두가지 작업은 한 번에!!! 처리되어야 함.
+		dao.updateProductQuantity(productNum, saleQuantity);
+		if(new Random().nextBoolean()) {
+			try {
+				throw new Exception("Just Error!");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		dao.insertSaleRecord(productNum, saleDate, buyer, saleQuantity);
+		dao.commitTransaction(); // transaction commit
+	}
+}

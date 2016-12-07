@@ -1,0 +1,12 @@
+package ver1;
+
+// Car 객체는 Tire 객체를 의존함
+// (Service 클래스 객체는 DAO 객체가 필요함)
+public class Car {
+	public Car() {
+	}
+	
+	public void printCarInfo() {
+		
+	}
+}

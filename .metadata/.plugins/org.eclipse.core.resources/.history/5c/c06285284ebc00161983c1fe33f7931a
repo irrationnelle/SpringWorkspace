@@ -1,0 +1,16 @@
+package test02_transaction;
+
+import java.util.Date;
+
+public class ProductService {
+	private int saleQuantity = 1;
+	private String buyer = "rase";
+	private Date saleDate = new Date();
+	private int productNum = 2;
+	
+	private ProductDao dao = new ProductDao();
+	
+	public saleProduct() {
+		
+	}
+}

@@ -1,0 +1,9 @@
+package test02;
+
+public class Sample implements InitializaingBean, Disposable{
+	public Sample() {
+		System.out.println("Sample »ý¼ºÀÚ");
+	}
+	
+	
+}

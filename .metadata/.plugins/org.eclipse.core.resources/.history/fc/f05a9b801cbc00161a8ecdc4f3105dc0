@@ -1,0 +1,9 @@
+package test02;
+
+public class Sample {
+	public Sample() {
+		System.out.println("Sample »ı¼ºÀÚ");
+	}
+	
+	
+}

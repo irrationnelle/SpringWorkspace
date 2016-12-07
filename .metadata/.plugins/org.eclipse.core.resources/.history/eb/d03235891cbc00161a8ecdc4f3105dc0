@@ -1,0 +1,5 @@
+package test02;
+
+public interface InitializaingBean {
+	public void afterPropertiesSet() throws Exception;
+}

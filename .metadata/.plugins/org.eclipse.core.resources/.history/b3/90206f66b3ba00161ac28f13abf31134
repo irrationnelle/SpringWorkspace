@@ -1,0 +1,13 @@
+package ver2_2;
+
+public class Car {
+	private Tire tire;
+	
+	public Car() {
+		tire = new ChinaTire();
+	}
+	
+	public void printCarInfo() {
+		
+	}
+}
