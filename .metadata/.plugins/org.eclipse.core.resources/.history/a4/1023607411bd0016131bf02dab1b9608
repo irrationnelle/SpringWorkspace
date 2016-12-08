@@ -1,0 +1,28 @@
+package ex01_spring.vo;
+
+public class BookVO {
+	private int bookNum;
+	private String title;
+	private String writer;
+	private int price;
+	private String publisher;
+	
+	public BookVO() {	}
+
+	public BookVO(int bookNum, String title, String writer, int price, String publisher) {
+		this.bookNum = bookNum;
+		this.title = title;
+		this.writer = writer;
+		this.price = price;
+		this.publisher = publisher;
+	}
+
+	public BookVO(String title, String writer, int price, String publisher) {
+		this.title = title;
+		this.writer = writer;
+		this.price = price;
+		this.publisher = publisher;
+	}
+	
+	
+}
