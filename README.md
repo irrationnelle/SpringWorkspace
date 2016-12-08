@@ -4,7 +4,7 @@ Spring
 # 자바 데이터베이스 개선 요구사항
 ##(지금까지의 자바 데이터베이스가 불편해서 개선할 사항)
 1. 커넥션 관리 (DB에 연결하는 거)
-2. close를 위한 try-catch-finally 구문
+2. close를 위한 try-catch-finally 구문의 번거로움
 3. insert, update 등 인자가 많이 전달되는 쿼리 실행시 자료형과 순서를 개발자가 다 처리해야 하는 점
 4. select 실행 후 결과 ResultSet을 직접 핸들링 해야하는가?
 
