@@ -35,6 +35,7 @@ Spring
 1. DataSource: 드라이버 로딩 및 커넥션 관리
 2. JdbcTemplate: DataSource 객체를 의존함. 인자 전달 등등 기능
 3. BookDao: JdbcTemplate
-* 우리가 만든 클래스가 아니기 때문에 @annotation을 붙이지 못하고 bean 태그를 작성
+
+* DataSource와 JdbcTemplate는 우리가 만든 클래스가 아니기 때문에 @annotation을 붙이지 못하고 bean 태그를 작성
 * DataSource 객체는 DB에 접속하는 용도(i.e. 드라이버 로딩, 커넥션 연결 등)
 * BookDao는 우리가 작성한 클래스이기 때문에 @annotation 붙여줘도 되고 bean 태그로 작성도 가능
