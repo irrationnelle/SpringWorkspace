@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 일부러 이상하게 id 이름을 설정 -->
+	<!-- BasicDataSource가 자동 완성이 안 되면 라이브러리가 제대로 추가가 안 된 것-->
+	<!-- 커넥션 관리와 드라이버 로딩을 담당하기에 setters와 getters가 있어서 property 태그를 이용 -->
+	<bean id="dddd" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value=""/>
+	</bean>
+
+</beans>
