@@ -35,6 +35,7 @@ Spring
 # 등장 객체:
 ### DataSource-JdbcTemplate-BookDao
 1. DataSource: 드라이버 로딩 및 커넥션 관리
+   * https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/applicationContext.xml
 2. JdbcTemplate: DataSource 객체를 의존함. 인자 전달 등등 기능
 3. BookDao: JdbcTemplate
 
