@@ -40,6 +40,8 @@ Spring
    * 참조 <27-39></27-39>번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/applicationContext.xml
 3. BookDao: JdbcTemplate
    * 하위 패키지 생성: test01_spring.vo
+   * test01_spring.vo가 하위패키지로 들어가는 것을 보고 싶으면 아래처럼 하면 가능
+   * ![test01_spring.vo 하위 패키지로 들어가는 것을 보기 위해서](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/SpringDay04/01.png)
    * 하위 vo 패키지에 vo 클래스 작성
    * 참조: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/BookDao.java
 
