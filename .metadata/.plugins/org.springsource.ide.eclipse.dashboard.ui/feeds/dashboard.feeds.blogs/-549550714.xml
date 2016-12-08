@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-12-06T05:00:00Z</updated>
+  <updated>2016-12-07T19:03:00Z</updated>
+  <entry>
+    <title>Spring Tips: Bootiful Dashboards</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/12/07/spring-tips-bootiful-dashboards" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-11-26:2710</id>
+    <updated>2016-12-07T19:03:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at the Codecentric Spring Boot Admin and the Ordina JWorks Microservices Dashboard&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/u1QnlAbCFys" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - December 6th, 2016</title>
     <link rel="alternate" href="https://spring.io/blog/2016/12/06/this-week-in-spring-december-6th-2016" />
@@ -809,25 +822,5 @@ You can find executable examples for all of that in our examples repository.&lt;
   &lt;li&gt;Spring Data Couchbase 3.0 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-couchbase/3.0.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.0.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.0.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.0.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Find a curated changelog in our &lt;a href="https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Kay"&gt;release train wiki&lt;/a&gt; or skim through a &lt;a href="https://jira.spring.io/issues/?filter=????"&gt;full list of changes in JIRA&lt;/a&gt;. Your feedback is welcome.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow for Apache YARN 1.1.0.RC1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/11/23/spring-cloud-data-flow-for-apache-yarn-1-1-0-rc1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Janne Valkealahti</name>
-    </author>
-    <id>tag:spring.io,2016-11-23:2707</id>
-    <updated>2016-11-23T12:38:07Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Cloud Data Flow team, I am pleased to announce the 1.1.0.RC1 release of &lt;a href="http://cloud.spring.io/spring-cloud-dataflow-server-yarn"&gt;Spring Cloud Data Flow for Apache YARN&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-yarn"&gt;Spring Cloud Data Flow for Apache YARN&lt;/a&gt; allows one to use all the goodness of &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow"&gt;Spring Cloud Data Flow&lt;/a&gt; (like the Shell and UI) while targeting Apache YARN as a backend. Stream components are deployed as individual apps in Apache YARN, leveraging the power of the platform to handle scaling and health monitoring.&lt;/p&gt;
-&lt;p&gt;This first release candicate&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Builds upon Spring Cloud Data Flow 1.1.0.RC1 and Spring Cloud Deployer 1.1.0.RC1.&lt;/li&gt;
-  &lt;li&gt;Support for keeping multiple deployer versions in hdfs.&lt;/li&gt;
-  &lt;li&gt;Preparation of supporting upgrades on Ambari when these become available with Ambari future versions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To get started using Spring Cloud Data Flow for Apache YARN &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-yarn/docs/1.1.0.RC1/reference/htmlsingle/#_spring_cloud_data_flow_runtime"&gt;follow these steps&lt;/a&gt; outlined in the reference documentation.&lt;/p&gt;
-&lt;p&gt;For a complete/cumulative list of changes and improvements, please refer to &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-yarn/issues?q=milestone%3A1.1.0.M1+is%3Aclosed"&gt;Server 1.1.0.M1 release&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-yarn/issues?q=milestone%3A1.1.0.RC1+is%3Aclosed"&gt;Server 1.1.0.RC1 release&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-yarn/issues?q=milestone%3A1.1.0.M1+is%3Aclosed"&gt;Deployer 1.1.0.M1 release&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-yarn/issues?q=milestone%3A1.1.0.RC1+is%3Aclosed"&gt;Deployer 1.1.0.RC1 release&lt;/a&gt;.&lt;/p&gt;</content>
   </entry>
 </feed>

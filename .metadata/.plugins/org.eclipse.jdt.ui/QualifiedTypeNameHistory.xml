@@ -8,4 +8,13 @@
 <fullyQualifiedTypeName name="org.springframework.beans.factory.InitializingBean"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.DisposableBean"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="test02_transaction.ProductDao"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="test02_transaction.ProductService"/>
 </qualifiedTypeNameHistroy>

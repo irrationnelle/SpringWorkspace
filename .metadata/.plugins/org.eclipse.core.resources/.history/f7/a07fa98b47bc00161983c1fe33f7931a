@@ -1,5 +1,0 @@
-package test02_transaction;
-
-public class ProductDao {
-	public static final String DB_URL = "org.mariadb.jdbc.Driver";
-}

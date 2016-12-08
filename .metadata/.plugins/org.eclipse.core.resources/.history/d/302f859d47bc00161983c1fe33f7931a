@@ -1,6 +1,0 @@
-package test02_transaction;
-
-public class ProductDao {
-	public static final String DB_NAME = "org.mariadb.jdbc.Driver";
-	public static final String DB_URL = "jdbc:mariadb://70.12.109.123:3306/spring";
-}
