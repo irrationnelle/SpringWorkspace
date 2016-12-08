@@ -35,9 +35,9 @@ Spring
 # 등장 객체:
 ### DataSource-JdbcTemplate-BookDao
 1. DataSource: 드라이버 로딩 및 커넥션 관리
-   * 참조 11-17번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/applicationContext.xml
+   * 참조 11-17번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/applicationContext.xml
 2. JdbcTemplate: DataSource 객체를 의존함. 인자 전달 등등 기능
-   * 참조 19-26번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/applicationContext.xml
+   * 참조 19-26번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/applicationContext.xml
 3. BookDao: JdbcTemplate
 
 * DataSource와 JdbcTemplate는 우리가 만든 클래스가 아니기 때문에 @annotation을 붙이지 못하고 bean 태그를 작성
