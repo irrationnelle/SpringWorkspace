@@ -21,13 +21,13 @@ Spring
 * http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.6
 
 # 테이블 생성
-*create table book(
-*book_num int primary key auto_increment,
-*title varchar(100) not null,
-*writer varchar(50) not null,
-*price int not null,
-*publsiher varchar(50)
-*);
+* create table book(
+* book_num int primary key auto_increment,
+* title varchar(100) not null,
+* writer varchar(50) not null,
+* price int not null,
+* publsiher varchar(50)
+* );
 
 
 # 등장 객체:
