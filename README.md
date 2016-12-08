@@ -9,7 +9,8 @@ Spring
 4. select 실행 후 결과 ResultSet을 직접 핸들링 해야하는가?
 
 # 필요 dependency:
-## pom.xml ( https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/pom.xml ) 에 추가할 dependency를 의미
+## pom.xml에 추가할 dependency를 의미
+## 참조: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/pom.xml
 ### Spring context, core, jdbc: 4.1.6 버전
 * http://mvnrepository.com/artifact/org.springframework/spring-context/4.1.6.RELEASE
 * http://mvnrepository.com/artifact/org.springframework/spring-core/4.1.6.RELEASE
