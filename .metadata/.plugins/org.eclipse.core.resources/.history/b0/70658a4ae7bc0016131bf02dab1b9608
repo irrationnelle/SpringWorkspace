@@ -23,7 +23,6 @@ public class BookDao {
 		String sql = "insert into book(title, writer, publihser, price)" +
 					 "values(?, ?, ?, ?)";
 		
-		// String인지 int인지 자료형을 맞춰줄 필요도 없고 단순히 ? 순서에 맞게 인자값들을 넣어주는 것만 지켜주면 된다
-		return jdbcTemplate.update(sql, book.getTitle(), book.getWriter(), book.getPublisher(), book.getPrice());
+		return jdbcTemplate.update(book.getTitle(), book.getWriter(), book.getPublisher(), book.getPrice());
 	}
 }

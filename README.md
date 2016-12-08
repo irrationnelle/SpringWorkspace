@@ -37,9 +37,10 @@ Spring
 1. DataSource: 드라이버 로딩 및 커넥션 관리
    * 참조 13-19번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/applicationContext.xml
 2. JdbcTemplate: DataSource 객체를 의존함. 인자 전달 등등 기능
-   * 참조 27-39번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/applicationContext.xml
+   * 참조 <27-39></27-39>번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/applicationContext.xml
 3. BookDao: JdbcTemplate
    * 하위 패키지 생성: test01_spring.vo
+   * 하위 vo 패키지에 vo 클래스 작성
 
 
 * DataSource와 JdbcTemplate는 우리가 만든 클래스가 아니기 때문에 @annotation을 붙이지 못하고 bean 태그를 작성
