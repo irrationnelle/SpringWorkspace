@@ -20,7 +20,7 @@
 <!-- 		<constructor-arg name="dataSource" ref="dddd" /> -->
 <!-- 	</bean> -->
 	
-	<!-- 주석처리한 위에꺼나 아래꺼 둘 중 하나만 사용 -->
+	<!-- 위에꺼나 아래꺼 둘 중 하나만 사용 -->
 	<bean id="jjjj" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dddd"/>
 	</bean>
