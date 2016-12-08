@@ -41,7 +41,7 @@ Spring
 3. BookDao: JdbcTemplate
    * 하위 패키지 생성: test01_spring.vo
    * 하위 vo 패키지에 vo 클래스 작성
-
+   * 참조: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/BookDao.java
 
 * DataSource와 JdbcTemplate는 우리가 만든 클래스가 아니기 때문에 @annotation을 붙이지 못하고 bean 태그를 작성
 * DataSource 객체는 DB에 접속하는 용도(i.e. 드라이버 로딩, 커넥션 연결 등)

@@ -1,0 +1,8 @@
+package test01_spring;
+
+public class Test {
+	public static void main(String[] args) {
+		// 이때 BookDao dao = new BookDao(); 로 객체 생성하면 안 된다!
+		// 1. 먼저 기본 생성자가 존재하지 않음.
+	}
+}
