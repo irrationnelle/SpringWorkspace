@@ -1,0 +1,9 @@
+package test01_spring.vo;
+
+public class BookVO {
+	private int bookNum;
+	private String title;
+	private String writer;
+	private int price;
+	private String publisher;
+}

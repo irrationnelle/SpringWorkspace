@@ -8,6 +8,8 @@ public class BookVO {
 	private String publisher;
 	
 	public BookVO() {	}
+
+	
 	
 	public BookVO(String title, String writer, int price, String publisher) {
 		super();
