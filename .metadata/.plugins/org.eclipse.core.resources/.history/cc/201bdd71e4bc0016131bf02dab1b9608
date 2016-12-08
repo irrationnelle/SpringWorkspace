@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<!-- BasicDataSource가 자동 완성이 안 되면 라이브러리가 제대로 추가가 안 된 것-->
+	<!-- 커넥션 관리와 드라이버 로딩을 담당하는 setters와 getters가 있어서 property 태그를 이용 -->
+	
+	<!-- 일부러 선생님이 이상하게 id 이름을 설정한거라고 함 -->
+	<bean id="dddd" class="org.apache.commons.dbcp.BasicDataSource">
+		<!-- value 값으로 전달되는 jdbc 드라이버 이름은 제각각 다르므로 자동완성이 안 되고 수동 입력해야 함 -->
+		<property name="driverClassName" value="com.jdbc.mysql.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/spring" />
+		<property name="username" value="root" />
+		<property name="password" value="sds902" />
+	</bean>
+	
+<!-- 	<bean id="jjjj" class="org.springframework.jdbc.core.JdbcTemplate"> -->
+<!-- 		<constructor-arg name="dataSource" ref="dddd" /> -->
+<!-- 	</bean> -->
+	
+	<!-- 주석처리한 위에꺼나 아래꺼 둘 중 하나만 사용 -->
+	<bean id="jjjj" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dddd"/>
+	</bean>
+
+</beans>
