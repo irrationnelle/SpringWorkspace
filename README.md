@@ -28,7 +28,7 @@ Spring
 * title varchar(100) not null,
 * writer varchar(50) not null,
 * price int not null,
-* publsiher varchar(50)
+* publisher varchar(50)
 * );
 
 
