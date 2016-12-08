@@ -11,7 +11,7 @@ Spring
 # 필요 dependency:
 # 만약 이클립스에서 기본클래스를 찾거나 로드할 수 없습니다 오류가 발생한다면 Spring context, core, jdbc 버전을 변경할 것! 
 ## pom.xml에 추가할 dependency를 의미
-### 참조: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/pom.xml
+### 참조: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04DB/pom.xml
 ### Spring context, core, jdbc: 4.1.6 버전
 * http://mvnrepository.com/artifact/org.springframework/spring-context/4.1.6.RELEASE
 * http://mvnrepository.com/artifact/org.springframework/spring-core/4.1.6.RELEASE
