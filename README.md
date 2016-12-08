@@ -36,15 +36,15 @@ Spring
 # 등장 객체:
 ### DataSource-JdbcTemplate-BookDao
 1. DataSource: 드라이버 로딩 및 커넥션 관리
-   * 참조 13-19번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/applicationContext.xml
+   * 참조 13-19번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04DB/src/test01_spring/applicationContext.xml
 2. JdbcTemplate: DataSource 객체를 의존함. 인자 전달 등등 기능
-   * 참조 <27-39></27-39>번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/applicationContext.xml
+   * 참조 <27-39></27-39>번 라인: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04DB/src/test01_spring/applicationContext.xml
 3. BookDao: JdbcTemplate
    * 하위 패키지 생성: test01_spring.vo
    * test01_spring.vo가 하위패키지로 들어가는 것을 보고 싶으면 아래처럼 하면 가능
    * ![test01_spring.vo 하위 패키지로 들어가는 것을 보기 위해서](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/SpringDay04/01.png)
    * 하위 vo 패키지에 vo 클래스 작성
-   * 참조: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04/src/test01_spring/BookDao.java
+   * 참조: https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay04DB/src/test01_spring/BookDao.java
 
 * DataSource와 JdbcTemplate는 우리가 만든 클래스가 아니기 때문에 @annotation을 붙이지 못하고 bean 태그를 작성
 * DataSource 객체는 DB에 접속하는 용도(i.e. 드라이버 로딩, 커넥션 연결 등)
