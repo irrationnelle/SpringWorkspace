@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	
 	<!-- BasicDataSource가 자동 완성이 안 되면 라이브러리가 제대로 추가가 안 된 것-->
@@ -29,12 +27,8 @@
 		<property name="dataSource" ref="dddd"/>
 	</bean>
 	
-	<!-- @annotation을 사용하지 않은 경우 -->
-<!-- 	<bean id="dao" class="test01_spring.BookDao"> -->
-<!-- 		<constructor-arg name="jdbcTemplate" ref="jjjj"/> -->
-<!-- 	</bean> -->
-	
-	<!-- @Autowired 어노테이션을 사용한 경우-->
-	<context:annotation-config />
-	<context:component-scan base-package="test01_spring" />
+	<bean id="dao" class="test01_spring.BookDao">
+		<constructor-arg name="jdbcTemplate" ref="jjjj"/>
+	</bean>
+
 </beans>
