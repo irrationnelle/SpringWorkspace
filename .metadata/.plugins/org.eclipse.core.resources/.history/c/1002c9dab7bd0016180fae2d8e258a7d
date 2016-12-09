@@ -1,0 +1,5 @@
+package ex01_account.vo;
+
+public class AccountVO {
+	
+}

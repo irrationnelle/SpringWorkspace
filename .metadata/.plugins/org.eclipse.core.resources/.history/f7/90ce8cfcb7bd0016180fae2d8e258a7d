@@ -1,0 +1,10 @@
+package ex01_account.vo;
+
+public class AccountVO {
+	private int accountNum;
+	private String name;
+	private int amount;
+	private String password;
+	
+	
+}

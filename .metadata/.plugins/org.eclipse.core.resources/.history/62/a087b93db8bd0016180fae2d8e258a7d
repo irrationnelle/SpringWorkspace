@@ -1,0 +1,7 @@
+package ex01_account;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+public class AccountDAO {
+	private NamedParameterJdbcTemplate jdbcTemplate;
+}

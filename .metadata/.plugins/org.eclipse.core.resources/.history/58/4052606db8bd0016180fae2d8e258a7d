@@ -1,0 +1,17 @@
+package ex01_account;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import ex01_account.vo.AccountVO;
+
+public class AccountDAO {
+	private NamedParameterJdbcTemplate jdbcTemplate;
+
+	public void setJdbcTemplate(NamedParameterJdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	public int insert(AccountVO account) {
+		return jdbcTemplate.update(sql, param);
+	}
+}

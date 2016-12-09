@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="SpringDay03"/>
+<aop-project name="SpringDay01"/>
 <aop-project name="SpringDay02"/>
+<aop-project name="SpringDay03"/>
+<aop-project name="SpringEx01"/>
+<aop-project name="SpringEX02"/>
+<aop-project name="SpringDay05DB"/>
+<aop-project name="SpringDay04DB"/>
+<aop-project name="SpringEX03"/>
 </aop-reference-model>

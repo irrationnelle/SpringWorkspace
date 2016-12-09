@@ -1,0 +1,5 @@
+package ex01_account;
+
+public class AccountDAO {
+
+}
