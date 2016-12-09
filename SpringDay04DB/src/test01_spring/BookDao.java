@@ -42,6 +42,11 @@ public class BookDao {
 		return jdbcTemplate.queryForObject(sql, mapper, bookNum); 
 	}
 	
+	public List<BookVO> selectByTitle(String title) {
+		String sql = "select * from book where title=?";
+		return jdbcTemplate.query(sql, mapper, title);
+	}
+	
 	public List<BookVO> selectAll() {
 		String sql = "select * from book";
 		return jdbcTemplate.query(sql, mapper);
