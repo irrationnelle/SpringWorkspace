@@ -2,6 +2,7 @@ package test01_spring;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,6 +15,7 @@ import test01_spring.vo.BookVO;
 public class BookDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	private BookMapper mapper;
 	
 	// 기본 생성자 반드시 만들어 주어야 함
 	public BookDao(){}
@@ -35,6 +37,15 @@ public class BookDao {
 		return jdbcTemplate.update(sql, book.getTitle(), book.getWriter(), book.getPublisher(), book.getPrice());
 	}
 	
+	public BookVO select(int bookNum) {
+		String sql = "select * from book where book_num=?";
+		return jdbcTemplate.queryForObject(sql, mapper, bookNum); 
+	}
+	
+	public List<BookVO> selectAll() {
+		String sql = "select * from book";
+		return jdbcTemplate.query(sql, mapper);
+	}
 	
 	class BookMapper implements RowMapper<BookVO> {
 		
