@@ -15,7 +15,7 @@ import test01_spring.vo.BookVO;
 public class BookDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-	private BookMapper mapper;
+	private BookMapper mapper = new BookMapper();
 	
 	// 기본 생성자 반드시 만들어 주어야 함
 	public BookDao(){}
@@ -69,7 +69,7 @@ public class BookDao {
 			book.setPublisher(rs.getString("publisher"));
 			book.setTitle(rs.getString("title"));
 			book.setWriter(rs.getString("writer"));
-			return null;
+			return book;
 		}
 		
 	}
