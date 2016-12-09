@@ -71,6 +71,5 @@ public class BookDao {
 			book.setWriter(rs.getString("writer"));
 			return book;
 		}
-		
 	}
 }

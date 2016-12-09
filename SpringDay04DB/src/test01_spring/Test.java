@@ -16,8 +16,8 @@ public class Test {
 		
 		BookDao dao = context.getBean("bookDao", BookDao.class);
 		
-		BookVO book = new BookVO("Spring", "Yangyu", 35000, "sds");
-		System.out.println(dao.insert(book));
+//		BookVO book = new BookVO("Spring", "Yangyu", 35000, "sds");
+//		System.out.println(dao.insert(book));
 		
 		for(BookVO b: dao.selectAll()) {
 			System.out.println(b);

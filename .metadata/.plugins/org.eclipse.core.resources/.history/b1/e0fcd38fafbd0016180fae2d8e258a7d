@@ -1,0 +1,9 @@
+package test01_named;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+public class BookDaoNamed {
+	private NamedParameterJdbcTemplate jdbcTemplate;
+	
+	
+}

@@ -13,5 +13,9 @@
 	<bean id="named" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
 		<constructor-arg name="dataSource" ref="dataSource" />
 	</bean>
+	
+	<bean id="dao" class="test01_named.BookDaoNamed">
+		<property name="jdbcTemplate" ref="named" />
+	</bean>
 
 </beans>
