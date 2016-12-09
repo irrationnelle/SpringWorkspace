@@ -9,9 +9,5 @@
 		<property name="username" value="root" />
 		<property name="password" value="sds902" />
 	</bean>
-	
-	<bean id="named" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
-		<constructor-arg name="dataSource" ref="dataSource" />
-	</bean>
 
 </beans>
