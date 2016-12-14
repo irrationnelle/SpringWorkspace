@@ -1,7 +1,7 @@
-SpringDay08
+SpringDay08DB
 =============
 # Spring + MyBatis
-### DAO ÀÇÁ¸ °´Ã¼: SqlSessionTemplate
+### DAO ÀÇÁ¸ °´Ã¼: SqlSessionTemplate(DataSource + SqlSessionFactoryBean) 
 
 # ÇÊ¿ä Dependency
 * mysql-connector
