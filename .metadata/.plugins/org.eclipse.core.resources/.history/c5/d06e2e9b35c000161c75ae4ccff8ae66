@@ -1,0 +1,7 @@
+package mybatis_xml;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public class BookDAO {
+	private SqlSessionFactory factory;
+}

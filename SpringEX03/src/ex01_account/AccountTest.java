@@ -1,0 +1,15 @@
+package ex01_account;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AccountTest {
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("ex01_account/applicationContext.xml");
+		AccountController controller = context.getBean("accountController", AccountController.class); 
+		
+		while(true) {
+			controller.menu();
+		}
+	}
+}

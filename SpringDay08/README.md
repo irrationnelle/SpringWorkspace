@@ -1,0 +1,11 @@
+SpringDay08
+=============
+# Spring + MyBatis
+### DAO 의존 객체: SqlSessionTemplate
+
+# 필요 Dependency
+* mysql-connector
+* spring context/core/jdbc
+* commons-dbcp
+* mybatis
+* mybatis-spring

@@ -1,0 +1,67 @@
+package ex01_account;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.stereotype.Component;
+
+import ex01_account.vo.AccountVO;
+
+@Component
+public class AccountDAO {
+	public AccountDAO() {	}
+	
+	@Autowired
+	private NamedParameterJdbcTemplate jdbcTemplate;
+	private AccountMapper mapper = new AccountMapper();
+
+	public void setJdbcTemplate(NamedParameterJdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	public int insert(AccountVO account) {
+		String sql = "INSERT INTO account (name, amount, password) VALUES (:name, :amount, :password)";
+		SqlParameterSource param = new BeanPropertySqlParameterSource(account);
+		return jdbcTemplate.update(sql, param);
+	}
+	
+	public int update(AccountVO account) {
+		String sql = "UPDATE account SET amount= amount+:amount WHERE account_num=:accountNum";
+		SqlParameterSource param = new BeanPropertySqlParameterSource(account);
+		return jdbcTemplate.update(sql, param);
+	}
+	
+	public AccountVO select(int accountNum) {
+		String sql = "SELECT * FROM account WHERE account_num=:accountNum";
+		Map<String, Integer> paramMap = new HashMap<>();
+		paramMap.put("accountNum", accountNum);
+		return jdbcTemplate.queryForObject(sql, paramMap, mapper);
+	}
+	
+	public AccountVO select(String name) {
+		String sql = "SELECT * FROM account WHERE name=:name";
+		Map<String, String> paramMap = new HashMap<>();
+		paramMap.put("accountNum", name);
+		return jdbcTemplate.queryForObject(sql, paramMap, mapper);
+	}
+	
+	public class AccountMapper implements RowMapper<AccountVO> {
+
+		@Override
+		public AccountVO mapRow(ResultSet rs, int arg1) throws SQLException {
+			AccountVO account = new AccountVO();
+			account.setAccountNum(rs.getInt("accountNum"));
+			account.setAmount(rs.getInt("amount"));
+			account.setName(rs.getString("name"));
+			account.setPassword(rs.getString("password"));
+			return account;
+		}
+	}
+}

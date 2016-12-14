@@ -1,0 +1,5 @@
+package mybatis_xml;
+
+public class BookDAO {
+
+}

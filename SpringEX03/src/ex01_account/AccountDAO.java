@@ -16,6 +16,8 @@ import ex01_account.vo.AccountVO;
 
 @Component
 public class AccountDAO {
+	public AccountDAO() {	}
+	
 	@Autowired
 	private NamedParameterJdbcTemplate jdbcTemplate;
 	private AccountMapper mapper = new AccountMapper();
@@ -43,18 +45,23 @@ public class AccountDAO {
 		return jdbcTemplate.queryForObject(sql, paramMap, mapper);
 	}
 	
+	public AccountVO select(String name) {
+		String sql = "SELECT * FROM account WHERE name=:name";
+		Map<String, String> paramMap = new HashMap<>();
+		paramMap.put("accountNum", name);
+		return jdbcTemplate.queryForObject(sql, paramMap, mapper);
+	}
+	
 	public class AccountMapper implements RowMapper<AccountVO> {
 
 		@Override
 		public AccountVO mapRow(ResultSet rs, int arg1) throws SQLException {
 			AccountVO account = new AccountVO();
-			account.setAccountNum(rs.getInt("accountNum"));
+			account.setAccountNum(rs.getInt("account_num"));
 			account.setAmount(rs.getInt("amount"));
 			account.setName(rs.getString("name"));
 			account.setPassword(rs.getString("password"));
 			return account;
 		}
-		
 	}
-	
 }
