@@ -77,5 +77,15 @@ SpringDay09
 
 ### 여기서 공통 관심사항으로 처리되는 메소드들은 콜백 메소드(callback method)이다.
 ### 누군가가 명시적으로 호출하지 않기 때문. 이 '콜백 메소드를 호출하는 배후의 존재'를 프록시(Proxy)라 한다.
+### 자세한 코드 분석은 src로 들어가 직접 코드 참조할 것.
 
 ## AOP 용어 정리
+* JoinPoint: 공통 관심사항이 적용될 수 있는 지점
+    * i.e. 특정 기능 수행 전 before, 특정 기능 수행 후 after 등등
+    * before, after_returning, after_throwing, after, around 총 5개의 시점 존재.
+* PointCut: 공통 관심사항을 적용시킬 대상의 핵심 관심사항 호출 시점
+    * i.e. 입금, 회원가입, 로그인, 송금 등등
+* Advice: 공통 관심사항 구현코드 + 적용시점(MyAspect 클래스의 my_before 메소드)
+* Aspect: 여러 객채에 공통으로 적용되는 공통 관심사항 Aspect라고 함(Advice + PointCut)
+* Weaving: 공통 관심사항을 핵심 관심사항들에게 적용시키는 시점
+    * 컴파일 할 때, 실행할 때, 클래스 로딩할 때 등
