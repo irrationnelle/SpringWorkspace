@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<bean id="jaemin" class="ver2.Boy"/>
+	<bean id="yunmi" class="ver2.Girl"/>
+	
+	<bean id="myAspect" class="ver2.MyAspect"/>
+	
+	<aop:config>
+		<!-- 공통 관심사항 (각 클래스에 공통적으로 적용할 내용) -->
+		<aop:aspect ref="myAspect">
+			<!-- 클래스 두 개를 지명. id는 매번 이름을 execution.. 식으로 길게 지을 수 없어서 간편하게 부르기 위해 지정 -->
+			<aop:pointcut expression="execution(void makeFood())" id="myTarget"/>
+			
+			<!-- makefood(각 클래스의 핵심사항)라는 myTarget을 실행시키기 전에 해당 메소드를 먼저(before) 실행시켜라 -->
+			<aop:before method="my_before" pointcut-ref="myTarget" /> 
+			
+			<!-- makefood가 정상 작동 했을 때 실행시켜라 -->
+			<aop:after-returning method="my_after_returning" pointcut-ref="myTarget"/>
+			
+			<!-- makefood가 예외 발생 했을 때 실행시켜라 -->
+			<aop:after-throwing method="my_after_throwing" pointcut-ref="myTarget"/>
+			
+			<!-- 정상 종료이든 예외 발생 후 종료이든 makefood가 종료된 시점에 실행시켜라 -->
+			<aop:after method="my_after" pointcut-ref="myTarget"/>
+		</aop:aspect>
+	</aop:config>
+
+</beans>

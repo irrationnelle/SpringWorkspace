@@ -33,3 +33,42 @@ SpringDay09
     
 ### AspectJ Weaver
 * http://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+
+# 예시 시나리오
+### Boy: 배가 고프다 -> 냉면을 만든다 -> 음식을 먹는다 -> 설거지를 한다 (정상상황)
+### Boy: 배가 고프다 -> 냉면을 만든다 -> 불이 났다! (예외 발생) -> 엄마를 부른다 (예외 처리) -> 설거지를 한다 (예외상황)
+
+### Girl: 배가 고프다 -> 갈비를 만든다 -> 음식을 먹는다 -> 설거지를 한다 (정상상황)
+### Girl: 배가 고프다 -> 갈비를 만든다 -> 고기가 없다!(예외 발생) -> 엄마를 부른다 (예외 처리) -> 설거지를 한다 (예외상황)
+
+## 예시 시나리오에서 각 관심사항들
+* Boy 핵심 관심사항 : 냉면을 만든다
+* Girl 핵심 관심사항 : 갈비를 만든다
+* Person인 Boy와 Girl의 공통 관심사항 : 배가 고프다. (정상상황시) 음식을 먹는다. (예외 발생시) 엄마를 부른다. (상황 종료 후) 설거지를 한다.
+
+# applicationContext에 입력해야 하는 사항
+
+    <bean id="jaemin" class="ver2.Boy"/>
+	<bean id="yunmi" class="ver2.Girl"/>
+	
+	<bean id="myAspect" class="ver2.MyAspect"/>
+	
+	<aop:config>
+		<!-- 공통 관심사항 (각 클래스에 공통적으로 적용할 내용) -->
+		<aop:aspect ref="myAspect">
+			<!-- 클래스 두 개를 지명. id는 매번 이름을 execution.. 식으로 길게 지을 수 없어서 간편하게 부르기 위해 지정 -->
+			<aop:pointcut expression="execution(void makeFood())" id="myTarget"/>
+			
+			<!-- makefood(각 클래스의 핵심사항)라는 myTarget을 실행시키기 전에 해당 메소드를 먼저(before) 실행시켜라 -->
+			<aop:before method="my_before" pointcut-ref="myTarget" /> 
+			
+			<!-- makefood가 정상 작동 했을 때 실행시켜라 -->
+			<aop:after-returning method="my_after_returning" pointcut-ref="myTarget"/>
+			
+			<!-- makefood가 예외 발생 했을 때 실행시켜라 -->
+			<aop:after-throwing method="my_after_throwing" pointcut-ref="myTarget"/>
+			
+			<!-- 정상 종료이든 예외 발생 후 종료이든 makefood가 종료된 시점에 실행시켜라 -->
+			<aop:after method="my_after" pointcut-ref="myTarget"/>
+		</aop:aspect>
+	</aop:config>
