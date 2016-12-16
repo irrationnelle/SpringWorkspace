@@ -34,12 +34,12 @@ SpringDay09
 ### AspectJ Weaver
 * http://mvnrepository.com/artifact/org.aspectj/aspectjweaver
 
-# 예시 시나리오
-### Boy: 배가 고프다 -> 냉면을 만든다 -> 음식을 먹는다 -> 설거지를 한다 (정상상황)
-### Boy: 배가 고프다 -> 냉면을 만든다 -> 불이 났다! (예외 발생) -> 엄마를 부른다 (예외 처리) -> 설거지를 한다 (예외상황)
+## 예시 시나리오
+* Boy: 배가 고프다 -> 냉면을 만든다 -> 음식을 먹는다 -> 설거지를 한다 (정상상황)
+* Boy: 배가 고프다 -> 냉면을 만든다 -> 불이 났다! (예외 발생) -> 엄마를 부른다 (예외 처리) -> 설거지를 한다 (예외상황)
 
-### Girl: 배가 고프다 -> 갈비를 만든다 -> 음식을 먹는다 -> 설거지를 한다 (정상상황)
-### Girl: 배가 고프다 -> 갈비를 만든다 -> 고기가 없다!(예외 발생) -> 엄마를 부른다 (예외 처리) -> 설거지를 한다 (예외상황)
+* Girl: 배가 고프다 -> 갈비를 만든다 -> 음식을 먹는다 -> 설거지를 한다 (정상상황)
+* Girl: 배가 고프다 -> 갈비를 만든다 -> 고기가 없다!(예외 발생) -> 엄마를 부른다 (예외 처리) -> 설거지를 한다 (예외상황)
 
 ## 예시 시나리오에서 각 관심사항들
 * Boy 핵심 관심사항 : 냉면을 만든다
@@ -47,6 +47,8 @@ SpringDay09
 * Person인 Boy와 Girl의 공통 관심사항 : 배가 고프다. (정상상황시) 음식을 먹는다. (예외 발생시) 엄마를 부른다. (상황 종료 후) 설거지를 한다.
 
 # applicationContext에 입력해야 하는 사항
+### 입력 전에 먼저 applicationContext에서 namespace로 간 뒤 aop에 체크!
+![체크할 것](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/aop_check.png)
 
     <bean id="jaemin" class="ver2.Boy"/>
 	<bean id="yunmi" class="ver2.Girl"/>
@@ -72,3 +74,6 @@ SpringDay09
 			<aop:after method="my_after" pointcut-ref="myTarget"/>
 		</aop:aspect>
 	</aop:config>
+
+### 여기서 공통 관심사항으로 처리되는 메소드들은 콜백 메소드(callback method)이다.
+### 누군가가 명시적으로 호출하지 않기 때문. 이 '콜백 메소드를 호출하는 배후의 존재'를 프록시(Proxy)라 한다.
