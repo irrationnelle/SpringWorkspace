@@ -1,9 +1,9 @@
 SpringDay12MVC
 =============
 # MVC
-![²À ¿Ü¿ö¾ß ÇÏ´Â °Í](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/spirngmvc_flow.jpg)
+![ê¼­ ì™¸ì›Œì•¼ í•˜ëŠ” ê²ƒ](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/spirngmvc_flow.jpg)
 
-# ÇÊ¿ä dependency:
+# í•„ìš” dependency:
 ### Spring context, core, web, webmvc
 * http://mvnrepository.com/artifact/org.springframework/spring-context/
 * http://mvnrepository.com/artifact/org.springframework/spring-core/
