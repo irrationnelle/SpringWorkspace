@@ -1,6 +1,0 @@
-package ex01_spring.vo;
-
-public class BookVO {
-	private int bookNum;
-	
-}

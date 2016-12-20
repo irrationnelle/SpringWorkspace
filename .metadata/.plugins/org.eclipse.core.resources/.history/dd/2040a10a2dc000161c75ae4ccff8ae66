@@ -1,9 +1,0 @@
-package vo;
-
-public class BookVO {
-	private int bookNum;
-	private String title;
-	private String publisher;
-	private String writer;
-	pviate int price;
-}
