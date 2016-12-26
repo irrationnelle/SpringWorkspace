@@ -8,7 +8,7 @@ import vo.ArticleVO;
 public interface BoardMapper {
 	public int insert(ArticleVO article);
 	public int update(ArticleVO article);
-	public int update(int articleNum);
+	public int updateCount(int articleNum);
 	public int delete(int articleNum);
 	public ArticleVO select(int articleNum);
 	public List<ArticleVO> selectList(Map<String, Integer> map);

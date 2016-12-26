@@ -31,7 +31,7 @@ public class BoardDAO {
 	public int update(int articleNum) {
 		int result = 0;
 		BoardMapper mapper = session.getMapper(BoardMapper.class);
-		return result = mapper.update(articleNum);
+		return result = mapper.updateCount(articleNum);
 	}
 	
 	public int delete(int articleNum) {

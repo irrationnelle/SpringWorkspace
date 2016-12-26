@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		UPDATE article SET title=#{title}, content=#{content}, writer=#{writer} WHERE article_num=#{articleNum}
 	</update>
 	
-	<update id="update" parameterType="Integer">
+	<update id="updateCount" parameterType="Integer">
 		UPDATE article SET read_count = read_count +1
 	</update>
 	
