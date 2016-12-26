@@ -7,9 +7,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		INSERT INTO article (title, content, writer, read_count, write_date) VALUES (#{title}, #{content}, #{writer}, 0, now()) 
 	</insert>
 	
-	<update id=""></update>
+	<update id="update" parameterType="ArticleVO">
+		UPDATE article SET title=#{title}, content=#{content}, writer=#{writer} WHERE article_num=#{articleNum}
+	</update>
 	
-	<delete id=""></delete>
+	<update id="update" parameterType="Integer">
+		UPDATE article SET read_count = read_count +1
+	</update>
+	
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM article WHERE article_num={articleNum}
+	</delete>
 	
 	<select id="select" parameterType="Integer" resultMap="articleMap">
 		SELECT * FROM article WHERE article_num = #{articleNum}
@@ -17,6 +25,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="selectList" parameterType="Map" resultMap="articleMap">
 		SELECT * FROM article ORDER BY article_num DESC LIMIT #{startRow}, #{endRow}
+	</select>
+	
+	<select id="selectCount" resultType="Integer">
+		SELECT COUNT(*) FROM article
 	</select>
 	
 	
