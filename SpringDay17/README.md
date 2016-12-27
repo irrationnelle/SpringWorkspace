@@ -44,6 +44,6 @@ SpringDay17
 # 파일 여러 개 업로드(브라우저에서 테스트 시, /uploadFormMovie.do 로 접속할 것)
 * [src/controller/FileController.java](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/src/controller/FileController.java)
     * osX에서는 파일 경로 입력하는 방식이 다름. [참조사이트](http://stackoverflow.com/questions/5972026/path-to-file-on-a-mac-filenotfoundexception)
-* [src/vo/Movie.java]
-* [WebContent/upload_form_movie.jsp]
-* [WebContent/upload_movie_result.jsp]
+* [src/vo/Movie.java](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/src/vo/Movie.java)
+* [WebContent/upload_form_movie.jsp](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/WebContent/upload_form_movie.jsp)
+* [WebContent/upload_movie_result.jsp](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/WebContent/upload_movie_result.jsp)
