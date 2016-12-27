@@ -4,16 +4,12 @@ SpringDay17
 * 파일 업로드/다운로드는 ViewResolver를 통해서 view를 리턴하지 않는데,
 * view는 화면이기 때문에 파일 업로드/다운로드에서는 화면이 보여질 필요가 없기 때문이다.
 * 따라서 파일 업로드/다운로드에서는 ModelAndView 객체가 필요없다.
+
 ### MultiPartResolver: 파일 업로드에 관여하는 객체
 ### 파일 다운로드의 경우:
 * 파일 다운로드를 할 경우 서버 컴퓨터의 저장소로부터 InputStream으로 읽어 들여 DispatchServlet에 보내고,
 * DispatcherServlet은 OutputStream으로 클라이언트에게 파일을 보내준다.
 * 이 때 다운로드 요청시 응답하는 것은 html이 아닌 파일(예: octocat.jpg)을 주어야 한다.
-
-# 
-* 
-    * 
-    ![](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/aop_concept.png)
 
 # 필요 dependency:
 ### Spring context, core, web, webmvc
