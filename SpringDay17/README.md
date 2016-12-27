@@ -25,7 +25,10 @@ SpringDay17
 ### commons-io
 * http://mvnrepository.com/artifact/commons-io/commons-io
 
-# 변경 사항:
+### jstl
+* http://mvnrepository.com/artifact/javax.servlet/jstl
+
+# 파일 단일 업로드:
 * [WebContent/WEB-INF/web.xml](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/WebContent/WEB-INF/web.xml)
     * web.xml 편집창에서 Ctrl + Space를 눌러 자동완성이 뜨게 하면,
     * 최하단에 파란색 #으로 시작하는 부분에서 dispatcherservlet을 선택해준다.
@@ -37,3 +40,10 @@ SpringDay17
 * [src/controller/FileController.java](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/src/controller/FileController.java)
     * osX에서는 파일 경로 입력하는 방식이 다름. [참조사이트](http://stackoverflow.com/questions/5972026/path-to-file-on-a-mac-filenotfoundexception)
 * [src/vo/Book.java](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/src/vo/Book.java)
+
+# 파일 여러 개 업로드(브라우저에서 테스트 시, /uploadFormMovie.do 로 접속할 것)
+* [src/controller/FileController.java](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/src/controller/FileController.java)
+    * osX에서는 파일 경로 입력하는 방식이 다름. [참조사이트](http://stackoverflow.com/questions/5972026/path-to-file-on-a-mac-filenotfoundexception)
+* [src/vo/Movie.java]
+* [WebContent/upload_form_movie.jsp]
+* [WebContent/upload_movie_result.jsp]

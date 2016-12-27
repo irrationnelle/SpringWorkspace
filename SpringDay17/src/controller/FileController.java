@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Random;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import vo.Book;
+import vo.Movie;
 
 @Controller
 public class FileController {
@@ -97,4 +99,57 @@ public class FileController {
 			e.printStackTrace();
 		}
 	}
+	
+	@RequestMapping("/uploadFormMovie.do")
+	public String uploadFormMovie() {
+		return "upload_form_movie";
+	}
+	
+	@RequestMapping(value="/uploadMovie.do", method=RequestMethod.POST)
+	public ModelAndView uploadMovie(Movie movie) {
+		ModelAndView mv = new ModelAndView("upload_movie_result");
+
+		String savePath = "c:/upload_movie/";
+
+		File dir = new File(savePath);
+
+		if (dir.exists() == false) {
+			dir.mkdir();
+		}
+
+		// 여러개의 파일을 받기 위한 for문!
+		// movie.getMyFile()은 리스트
+		for(MultipartFile f: movie.getMyFile()) {
+			// 반복문 내부에서 새로운 파일 이름을 생성하여 계속 저장하고 transfer로 보내준다.
+			String savedName = savePath + "/" + f.getOriginalFilename() + new Random().nextInt(1000000);
+			File savedFile = new File(savedName);
+			
+			try {
+				f.transferTo(savedFile);
+				// 사용자가 파일 업로드 결과 확인하기 위한 콘솔 메세지
+				// 여러개의 파일이 업로드 되기 때문에 ModelAndView로 파일 업로드 결과를 출력하기가 어려움
+				System.out.println("원래 이름: "+f.getOriginalFilename());
+				System.out.println("저장된 이름: " + savedName);
+				System.out.println("-----------------------");
+			} catch (IllegalStateException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		mv.addObject("uploadedFileNames", movie.getMyFile());
+
+		return mv;
+	}
+	
+	
+	// 업로드된 파일을 현재 프로젝트 내부 폴더에
+	// 저장하고 싶으면 파일 저장경로를 아래와 같이 하면 된다.
+	/*
+	public ModelAndView uploadMovie(HttpServletRequest request, Movie movie) {
+		// 예시에서 "img"라고 들어가 있는 매개변수 위치에는 자신이 지은 폴더이름을 넣으면 된다.
+		String savePath = request.getServletContext().getRealPath("img");
+	}
+	*/
 }
