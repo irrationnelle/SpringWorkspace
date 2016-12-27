@@ -25,13 +25,14 @@ SpringDay17
 * http://mvnrepository.com/artifact/commons-io/commons-io
 
 # 변경 사항:
-* WebContent/WEB-INF/web.xml
+* [WebContent/WEB-INF/web.xml](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/WebContent/WEB-INF/web.xml)
     * web.xml 편집창에서 Ctrl + Space를 눌러 자동완성이 뜨게 하면,
     * 최하단에 파란색 #으로 시작하는 부분에서 dispatcherservlet을 선택해준다.
     * ![web.xml에서 자동완성](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/autocomplete_dispatcherservlet.png)
-* WebContent/WEB-INF/web-beans.xml
-* WebContent/index.jsp
-* WebContent/upload_form.jsp
-* src/controller/FileController.java
-    * osX에서는 파일 경로 입력하는 방식이 다름. [참조사이트][http://stackoverflow.com/questions/5972026/path-to-file-on-a-mac-filenotfoundexception]
-* src/vo/Book.java
+* [WebContent/WEB-INF/web-beans.xml](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/WebContent/WEB-INF/web-beans.xml)
+* [WebContent/index.jsp](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/WebContent/index.jsp)
+* [WebContent/upload_form.jsp](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/WebContent/upload_form.jsp)
+* [WebContent/upload_result.jsp](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/WebContent/upload_result.jsp)
+* [src/controller/FileController.java](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/src/controller/FileController.java)
+    * osX에서는 파일 경로 입력하는 방식이 다름. [참조사이트](http://stackoverflow.com/questions/5972026/path-to-file-on-a-mac-filenotfoundexception)
+* [src/vo/Book.java](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/src/vo/Book.java)
