@@ -1,5 +1,6 @@
 SpringDay17
 =============
+# [프로젝트 다운로드](https://github.com/irrationnelle/SpringWorkspace/blob/master/SpringDay17/SpringDay17.zip)
 # 파일 업로드
 * 파일 업로드/다운로드는 ViewResolver를 통해서 view를 리턴하지 않는데,
 * view는 화면이기 때문에 파일 업로드/다운로드에서는 화면이 보여질 필요가 없기 때문이다.
