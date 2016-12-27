@@ -11,7 +11,7 @@ SpringDay17
 * DispatcherServlet은 OutputStream으로 클라이언트에게 파일을 보내준다.
 * 이 때 다운로드 요청시 응답하는 것은 html이 아닌 파일(예: octocat.jpg)을 주어야 한다.
 
-# 필요 dependency:
+# 필요 dependencies:
 ### Spring context, core, web, webmvc
 * http://mvnrepository.com/artifact/org.springframework/spring-context/
 * http://mvnrepository.com/artifact/org.springframework/spring-core/
