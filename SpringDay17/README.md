@@ -26,6 +26,11 @@ SpringDay17
 
 # 변경 사항:
 * WebContent/WEB-INF/web.xml
+    * web.xml 편집창에서 Ctrl + Space를 눌러 자동완성이 뜨게 하면,
+    * 최하단에 파란색 #으로 시작하는 부분에서 dispatcherservlet을 선택해준다.
     * ![web.xml에서 자동완성](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/autocomplete_dispatcherservlet.png)
 * WebContent/WEB-INF/web-beans.xml
+* WebContent/index.jsp
+* WebContent/upload_form.jsp
 * src/controller/FileController.java
+* src/vo/Book.java
