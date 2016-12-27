@@ -11,6 +11,6 @@
 		<input type="file" name="myFile"><br>
 		<input type="submit" value="전송">
 	</form>
-	
+	<a href="download.do">[파일 다운로드]</a>
 </body>
 </html>

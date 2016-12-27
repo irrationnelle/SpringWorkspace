@@ -33,4 +33,5 @@ SpringDay17
 * WebContent/index.jsp
 * WebContent/upload_form.jsp
 * src/controller/FileController.java
+    * osX에서는 파일 경로 입력하는 방식이 다름. [참조사이트][http://stackoverflow.com/questions/5972026/path-to-file-on-a-mac-filenotfoundexception]
 * src/vo/Book.java
