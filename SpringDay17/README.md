@@ -24,3 +24,8 @@ SpringDay17
 ### commons-io
 * http://mvnrepository.com/artifact/commons-io/commons-io
 
+# 변경 사항:
+* WebContent/WEB-INF/web.xml
+    * ![web.xml에서 자동완성](https://github.com/irrationnelle/SpringWorkspace/blob/master/imgs/autocomplete_dispatcherservlet.png)
+* WebContent/WEB-INF/web-beans.xml
+* src/controller/FileController.java
