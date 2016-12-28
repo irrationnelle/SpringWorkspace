@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.FileMapper">
+	<insert id="insert" parameterType="MyFile" useGeneratedKeys="true" keyColumn="file_num" keyProperty="fileNum">
+		INSERT INTO file_repository (original_name, saved_path) VALUES(#{originalName}, #{savedPath})
+	</insert>
+	
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM file_repository WHERE file_num=#{fileNum}
+	</delete>
+	
+	<select id="select" parameterType="Integer" resultMap="fileMap">
+		SELECT * FROM file_repository WHERE file_num=#{fileNum}
+	</select>
+	
+	<select id="selectList" resultMap="fileMap">
+		SELECT * FROM file_repository
+	</select>
+	
+	<resultMap type="MyFile" id="fileMap">
+		<result column="file_num" property="fileNum"/>
+		<result column="original_name" property="originalName"/>
+		<result column="saved_path" property="savedPath"/>
+	</resultMap>
+</mapper>
