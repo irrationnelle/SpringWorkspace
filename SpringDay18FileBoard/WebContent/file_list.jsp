@@ -25,7 +25,9 @@
 				<c:forEach items="${fileList}" var="f">
 					<tr>
 						<td>${f.fileNum}</td>
-						<td>${f.originalName}</td>
+						<td>
+							<a href="downloadFile.do?fileNum=${f.fileNum}">${f.originalName}</a>
+						</td>
 						<td>${f.savedPath}</td>
 					</tr>
 				</c:forEach>
