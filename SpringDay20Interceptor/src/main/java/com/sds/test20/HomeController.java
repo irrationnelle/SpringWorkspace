@@ -67,6 +67,11 @@ public class HomeController {
 	public String writeForm() {
 		return "write_form";
 	}
+	
+	@RequestMapping("/hello.do")
+	public String hello() {
+		return "hi";
+	}
 
 	// @RequestMapping("/boardList.do")
 	// public String boardList(HttpSession session, HttpServletResponse
