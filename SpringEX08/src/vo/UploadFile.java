@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.web.multipart.MultipartFile;
 
 public class UploadFile {
-	private List<MultipartFile> filelist;
+	private MultipartFile file;
 
-	public List<MultipartFile> getFilelist() {
-		return filelist;
+	public MultipartFile getFile() {
+		return file;
 	}
 
-	public void setFilelist(List<MultipartFile> filelist) {
-		this.filelist = filelist;
+	public void setFile(MultipartFile file) {
+		this.file = file;
 	}
 }

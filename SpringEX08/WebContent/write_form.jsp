@@ -91,31 +91,31 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="well bs-component">
-					<form class="form-horizontal" action="write.do" method="post">
+					<form class="form-horizontal" action="write.do" method="post" enctype="multipart/form-data">
 						<fieldset>
 							<legend>Legend</legend>
 							<div class="form-group">
 								<label for="inputTitle" class="col-md-2 control-label">Title</label>
 
 								<div class="col-md-10">
-									<input type="text" class="form-control" name="title" id="inputTitle"
-										placeholder="Title">
+									<input type="text" class="form-control" name="title"
+										id="inputTitle" placeholder="Title">
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputName" class="col-md-2 control-label">Name</label>
 
 								<div class="col-md-10">
-									<input type="text" class="form-control" name="writer" id="inputName"
-										placeholder="Name">
+									<input type="text" class="form-control" name="writer"
+										id="inputName" placeholder="Name">
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputPassword" class="col-md-2 control-label">Password</label>
 
 								<div class="col-md-10">
-									<input type="password" class="form-control" name="password" id="inputPassword"
-										placeholder="Password">
+									<input type="password" class="form-control" name="password"
+										id="inputPassword" placeholder="Password">
 								</div>
 							</div>
 
@@ -123,9 +123,25 @@
 								<label for="textArea" class="col-md-2 control-label">Textarea</label>
 
 								<div class="col-md-10">
-									<textarea class="form-control" rows="3" name="content" id="textArea"></textarea>
+									<textarea class="form-control" rows="3" name="content"
+										id="textArea"></textarea>
 									<span class="help-block">A longer block of help text
 										that breaks onto a new line and may extend beyond one line.</span>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputFile" class="col-md-2 control-label">File</label>
+
+								<div class="input-group" style="margin-left: 15px; margin-right: 15px">
+									<input type="text" readonly class="form-control"
+										placeholder="Browse..."> <input type="file"
+										id="inputFile" name="file" multiple> <span
+										class="input-group-btn input-group-sm">
+										<button type="button" class="btn btn-fab btn-fab-mini">
+											<i class="material-icons">attach_file</i>
+										</button>
+									</span>
 								</div>
 							</div>
 
